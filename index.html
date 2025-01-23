@@ -10,7 +10,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blikající stránka se slovem</title>
+        <title>Blikající stránka s obrázkem psa</title>
         <style>
             /* Styl pro tělo stránky */
             body {
@@ -25,16 +25,18 @@
                 transition: background-color 0.5s ease;
             }
     
-            /* Styl pro slovo uprostřed */
-            h1 {
-                font-size: 5rem;
-                text-align: center;
-                z-index: 10; /* Zajistí, že text bude vždy nad pozadím */
+            /* Styl pro obrázek */
+            img {
+                width: 300px; /* Nastaví šířku obrázku */
+                height: auto;
+                border-radius: 15px; /* Zakulacení rohů obrázku */
+                z-index: 10; /* Zajistí, že obrázek bude nad pozadím */
             }
         </style>
     </head>
     <body>
-        <h1>Slovo</h1>
+        <!-- Zde vlož svůj obrázek psa -->
+        <img src="https://example.com/obrazek-psa.jpg" alt="Pes">
     
         <script>
             const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF"];
