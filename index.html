@@ -10,24 +10,45 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Různobarevná stránka</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Blikající stránka se slovem</title>
+        <style>
+            /* Styl pro tělo stránky */
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Arial, sans-serif;
+                color: white;
+                background-color: #000;
+                transition: background-color 0.5s ease;
+            }
+    
+            /* Styl pro slovo uprostřed */
+            h1 {
+                font-size: 5rem;
+                text-align: center;
+                z-index: 10; /* Zajistí, že text bude vždy nad pozadím */
+            }
+        </style>
     </head>
     <body>
-        <section class="section red">
-            <h1>Červená sekce</h1>
-            <p>Toto je sekce s červeným pozadím.</p>
-        </section>
+        <h1>Slovo</h1>
     
-        <section class="section blue">
-            <h1>Modrá sekce</h1>
-            <p>Toto je sekce s modrým pozadím.</p>
-        </section>
+        <script>
+            const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF"];
+            let currentIndex = 0;
     
-        <section class="section green">
-            <h1>Zelená sekce</h1>
-            <p>Toto je sekce se zeleným pozadím.</p>
-        </section>
+            // Funkce pro změnu barvy pozadí
+            function changeBackgroundColor() {
+                document.body.style.backgroundColor = colors[currentIndex];
+                currentIndex = (currentIndex + 1) % colors.length;
+            }
+    
+            // Změna barvy pozadí každou sekundu
+            setInterval(changeBackgroundColor, 1000);
+        </script>
     </body>
     </html>
     
