@@ -3,99 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Můj webový projekt</title>
+    <title>Můj Web</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Vítejte na mém webu</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="about.html">O nás</a></li>
-                <li><a href="products.html">Seznam produktů</a></li>
+                <li><a href="products.html">Produkty</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <section>
-            <h2>O našem webu</h2>
-            <p>Tento web byl vytvořen jako součást školního projektu. Naučíte se zde základní principy HTML a CSS.</p>
-        </section>
-        
-        <section>
-            <h2>Naše nabídka</h2>
-            <img src="obrazek.jpg" alt="Ukázkový obrázek">
-            <p>Podívejte se na naši nabídku produktů.</p>
-            <a href="products.html">Více informací</a>
-        </section>
+        <h1>Vítejte na mém webu</h1>
+        <p>Toto je hlavní stránka mého webu.</p>
+        <img src="image1.jpg" alt="Popis obrázku 1">
     </main>
-
     <footer>
         <p>Pouze pro studijní účely</p>
     </footer>
 </body>
-</html>/* Obecné nastavení */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-/* Hlavička */
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Navigace */
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Hlavní obsah */
-main {
-    padding: 20px;
-}
-
-section {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-/* Obrázky */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
-<!DOCTYPE html>
+</html><!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
@@ -105,33 +36,95 @@ footer {
 </head>
 <body>
     <header>
-        <h1>O nás</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="about.html">O nás</a></li>
-                <li><a href="products.html">Seznam produktů</a></li>
+                <li><a href="products.html">Produkty</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <p>Jsme tým nadšenců do tvorby webů a rádi pomáháme lidem naučit se základy HTML a CSS.</p>
+        <h1>O nás</h1>
+        <p>Informace o nás a našem týmu.</p>
     </main>
-
     <footer>
         <p>Pouze pro studijní účely</p>
     </footer>
 </body>
-</html>@media (max-width: 600px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
+</html><!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="about.html">O nás</a></li>
+                <li><a href="products.html">Produkty</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Naše produkty</h1>
+        <p>Seznam našich produktů.</p>
+        <img src="image2.jpg" alt="Popis obrázku 2">
+    </main>
+    <footer>
+        <p>Pouze pro studijní účely</p>
+    </footer>
+</body>
+</html>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
