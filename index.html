@@ -1,59 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Můj webový projekt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon -->
 </head>
-<body><!DOCTYPE html>
-    <html lang="cs">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blikající stránka s obrázkem psa</title>
-        <style>
-            /* Styl pro tělo stránky */
-            body {
-                margin: 0;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: Arial, sans-serif;
-                color: white;
-                background-color: #000;
-                transition: background-color 0.5s ease;
-            }
-    
-            /* Styl pro obrázek */
-            img {
-                width: 300px; /* Nastaví šířku obrázku */
-                height: auto;
-                border-radius: 15px; /* Zakulacení rohů obrázku */
-                z-index: 10; /* Zajistí, že obrázek bude nad pozadím */
-            }
-        </style>
-    </head>
-    <body>
-        <!-- Zde vlož svůj obrázek psa -->
-        <img src="https://www.google.com/search?sca_esv=0dfdeba661b81aed&q=pes&udm=2&fbs=ABzOT_CGHNgROzTrfye-u2LQKYbN7oFyZt8YgcfRTxiXXnyhZwyf75UIlhswO8JQkDd6PNCwNaqC_kG3QIZVumn4QQ3zWKTs8o6rPdGLh8muHWpaUW2M5Vt9efuqY_WUTbftXP9GWyJnKCOviaNoTou1yARVekmIXTpvUxtykTQSPGED_sPLYJDXO-dhTzBSEa7M5Zdgy9Ce&sa=X&ved=2ahUKEwiMo9n2u4uLAxVA1AIHHeVGI1sQtKgLegQIERAB&biw=1536&bih=730&dpr=1.25#vhid=eAOZALFqTEsdIM&vssid=mosaic" alt="Pes">
-    
-        <script>
-            const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF"];
-            let currentIndex = 0;
-    
-            // Funkce pro změnu barvy pozadí
-            function changeBackgroundColor() {
-                document.body.style.backgroundColor = colors[currentIndex];
-                currentIndex = (currentIndex + 1) % colors.length;
-            }
-    
-            // Změna barvy pozadí každou sekundu
-            setInterval(changeBackgroundColor, 1000);
-        </script>
-    </body>
-    </html>
-    
-    
+<body>
+    <header>
+        <h1>Vítejte na mém webu</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="about.html">O nás</a></li>
+                <li><a href="products.html">Seznam produktů</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>O našem webu</h2>
+            <p>Tento web byl vytvořen jako součást školního projektu. Naučíte se zde základní principy HTML a CSS.</p>
+        </section>
+        
+        <section>
+            <h2>Naše nabídka</h2>
+            <img src="obrazek.jpg" alt="Ukázkový obrázek">
+            <p>Podívejte se na naši nabídku produktů.</p>
+            <a href="products.html">Více informací</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pouze pro studijní účely</p>
+    </footer>
 </body>
-</html>
+</html>/* Obecné nastavení */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Hlavička */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Navigace */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hlavní obsah */
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Obrázky */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nás</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>O nás</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="about.html">O nás</a></li>
+                <li><a href="products.html">Seznam produktů</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>Jsme tým nadšenců do tvorby webů a rádi pomáháme lidem naučit se základy HTML a CSS.</p>
+    </main>
+
+    <footer>
+        <p>Pouze pro studijní účely</p>
+    </footer>
+</body>
+</html>@media (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
