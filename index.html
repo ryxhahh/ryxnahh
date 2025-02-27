@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Můj Web</title>
+    <title>Kočky</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <header>
+        <h1>Vše o kočkách</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Domů</a></li>
-                <li><a href="about.html">O nás</a></li>
-                <li><a href="products.html">Produkty</a></li>
+                <li><a href="o-nas.html">O nás</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Vítejte na mém webu</h1>
-        <p>Toto je hlavní stránka mého webu.</p>
-        <img src="image1.jpg" alt="Popis obrázku 1">
+        <section>
+            <h2>Vítejte na stránce o kočkách</h2>
+            <p>Kočky jsou úžasná a nezávislá zvířata, která si lidé oblíbili po celém světě.</p>
+            <img src="cat1.jpg" alt="Roztomilá kočka">
+        </section>
     </main>
     <footer>
         <p>Pouze pro studijní účely</p>
     </footer>
 </body>
-</html><!DOCTYPE html>
+</html>
+
+<!-- o-nas.html -->
+<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
@@ -36,95 +42,97 @@
 </head>
 <body>
     <header>
+        <h1>O nás</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Domů</a></li>
-                <li><a href="about.html">O nás</a></li>
-                <li><a href="products.html">Produkty</a></li>
+                <li><a href="o-nas.html">O nás</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>O nás</h1>
-        <p>Informace o nás a našem týmu.</p>
+        <section>
+            <h2>Kdo jsme?</h2>
+            <p>Jsme nadšenci do koček a rádi sdílíme informace o těchto nádherných tvorech.</p>
+        </section>
     </main>
     <footer>
         <p>Pouze pro studijní účely</p>
     </footer>
 </body>
-</html><!DOCTYPE html>
+</html>
+
+<!-- galerie.html -->
+<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkty</title>
+    <title>Galerie</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <h1>Galerie</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Domů</a></li>
-                <li><a href="about.html">O nás</a></li>
-                <li><a href="products.html">Produkty</a></li>
+                <li><a href="o-nas.html">O nás</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Naše produkty</h1>
-        <p>Seznam našich produktů.</p>
-        <img src="image2.jpg" alt="Popis obrázku 2">
+        <section>
+            <h2>Fotografie koček</h2>
+            <img src="cat2.jpg" alt="Kočka na louce">
+            <img src="cat3.jpg" alt="Kočka na stromě">
+            <img src="cat4.jpg" alt="Koťátko v košíku">
+        </section>
     </main>
     <footer>
         <p>Pouze pro studijní účely</p>
     </footer>
 </body>
-</html>body {
+</html>
+
+/* styles.css */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f9f9f9;
 }
-
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #ff9900;
+    padding: 15px;
     text-align: center;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
 }
-
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
-
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
-
 main {
     padding: 20px;
     text-align: center;
 }
-
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
+    padding: 10px;
+    position: absolute;
     bottom: 0;
+    width: 100%;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
